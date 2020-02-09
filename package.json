@@ -2,7 +2,7 @@
   "name": "@nuxtjs/gtm",
   "version": "2.0.0",
   "description": "Google Tag Manager Module for Nuxt.js",
-  "repository": "nuxt-community/@nuxtjs/gtm",
+  "repository": "nuxt-community/gtm-module",
   "license": "MIT",
   "contributors": [
     {
