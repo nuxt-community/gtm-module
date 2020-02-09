@@ -17,7 +17,6 @@ read GTM_ID
 if [ "$GTM_ID" = "" ] ; then
   jest
 else
-  printf "Full test"
   replaceStrInNuxtConfigFile "GTM-XXXXXXX" "$GTM_ID"
   jest
   replaceStrInNuxtConfigFile "$GTM_ID" "GTM-XXXXXXX"

@@ -36,17 +36,21 @@ describe('Module (universal mode)', () => {
 
   // test with real GTM id
   const gtmId = nuxtConfig.gtm.id
-  if (gtmId !== 'XXXXXXX') {
+  if (gtmId !== 'GTM-XXXXXXX') {
     test('GTM should be defined ($nuxt.$gtm)', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
       expect(window.$nuxt.$gtm).toBeDefined()
     })
-    // test('Verifying duplicate GTM script', async () => {
-    //   const window = await nuxt.renderAndGetWindow(url('/'))
-    //   const html = window.document.documentElement.innerHTML
-    //   console.log(html)
-    //   expect(html).toContain('Works!')
-    // })
+
+    test('Verifying duplicate GTM script', async () => {
+      const window = await nuxt.renderAndGetWindow(url('/'))
+
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+      const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
+      const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
+
+      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
+    })
   }
 })
 
@@ -84,16 +88,20 @@ describe('Module (spa mode)', () => {
 
   // test with real GTM id
   const gtmId = nuxtConfig.gtm.id
-  if (gtmId !== 'XXXXXXX') {
+  if (gtmId !== 'GTM-XXXXXXX') {
     test('GTM should be defined ($nuxt.$gtm)', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
       expect(window.$nuxt.$gtm).toBeDefined()
     })
-    // test('Verifying duplicate GTM script', async () => {
-    //   const window = await nuxt.renderAndGetWindow(url('/'))
-    //   const html = window.document.documentElement.innerHTML
-    //   console.log(html)
-    //   expect(html).toContain('Works!')
-    // })
+
+    test('Verifying duplicate GTM script', async () => {
+      const window = await nuxt.renderAndGetWindow(url('/'))
+
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+      const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
+      const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
+
+      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
+    })
   }
 })
