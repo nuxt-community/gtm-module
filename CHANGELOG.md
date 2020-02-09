@@ -1,7 +1,13 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 2.0.0 (2020-02-09)
+
+
+### Features
+
+* initial commit for v2 ([aeba6da](///commit/aeba6dadb82ad5035a32a3fca414046600baad3d))
 
 ## [2.3.1](https://github.com/nuxt-community/modules/compare/@nuxtjs/google-tag-manager@2.3.0...@nuxtjs/google-tag-manager@2.3.1) (2019-11-01)
 
