@@ -10,6 +10,8 @@
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
+ℹ️ If coming from v1 (`@nuxtjs/google-tag-manager`) please read v2 [release notes](https://github.com/nuxt-community/gtm-module/releases/tag/v2.0.0).
+
 ## Setup
 
 1. Add `@nuxtjs/gtm` dependency to your project
