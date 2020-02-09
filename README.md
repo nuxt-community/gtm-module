@@ -81,7 +81,7 @@ You can push events into the configured layer:
 ```js
 this.$gtm.push({ event: 'myEvent', ...someAttributes })
 ```
-s
+
 ## Development
 
 1. Clone this repository
