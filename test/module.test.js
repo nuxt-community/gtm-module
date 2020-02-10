@@ -1,6 +1,6 @@
 const path = require('path')
 const { setup, loadConfig, get, url } = require('@nuxtjs/module-test-utils')
-const { defaultSettings } = require(path.join(__dirname, '../', 'lib', 'module.js'))
+const defaultSettings = require(path.join(__dirname, '../', 'lib', 'defaults.js'))
 
 describe('Module (universal mode)', () => {
   let nuxt
