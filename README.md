@@ -88,7 +88,7 @@ this.$gtm.push({ event: 'myEvent', ...someAttributes })
 
 1. Clone this repository
 2. Install dependencies using `yarn install` or `npm install`
-3. Start development server using `npm run dev`
+3. Start development server using `npm run dev` with fake GTM ID or `GTM_ID=<your gtm id> npm run dev` with real GTM ID
 
 ## License
 

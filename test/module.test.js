@@ -8,6 +8,7 @@ describe('Module (universal mode)', () => {
   const nuxtConfig = loadConfig(__dirname, '../../example')
   nuxtConfig.mode = 'universal'
 
+  const gtmId = nuxtConfig.gtm.id
   const scriptId = nuxtConfig.gtm.scriptId || defaultSettings.scriptId
   const noscriptId = nuxtConfig.gtm.noscriptId || defaultSettings.noscriptId
 
@@ -35,7 +36,6 @@ describe('Module (universal mode)', () => {
   })
 
   // test with real GTM id
-  const gtmId = nuxtConfig.gtm.id
   if (gtmId !== 'GTM-XXXXXXX') {
     test('GTM should be defined ($nuxt.$gtm)', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
@@ -60,6 +60,7 @@ describe('Module (spa mode)', () => {
   const nuxtConfig = loadConfig(__dirname, '../../example')
   nuxtConfig.mode = 'spa'
 
+  const gtmId = nuxtConfig.gtm.id
   const scriptId = nuxtConfig.gtm.scriptId || defaultSettings.scriptId
   const noscriptId = nuxtConfig.gtm.noscriptId || defaultSettings.noscriptId
 
@@ -87,7 +88,6 @@ describe('Module (spa mode)', () => {
   })
 
   // test with real GTM id
-  const gtmId = nuxtConfig.gtm.id
   if (gtmId !== 'GTM-XXXXXXX') {
     test('GTM should be defined ($nuxt.$gtm)', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
