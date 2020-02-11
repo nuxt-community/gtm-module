@@ -11,10 +11,13 @@ module.exports = {
     { handler: require('../') }
   ],
   gtm: {
-    id: 'GTM-XXXXXXX',
+    id: 'GTM-56H68LH',
+    autoInit: true,
     scriptDefer: true,
     pageTracking: true,
-    layer: 'test',
-    autoInit: true
+    // layer: 'test',
+    variables: {
+      test: '1'
+    }
   }
 }
