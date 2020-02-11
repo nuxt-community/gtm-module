@@ -18,7 +18,7 @@
     "generate": "nuxt generate example",
     "lint": "eslint --ext .js,.vue example lib test",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish",
-    "test": "yarn lint | jest"
+    "test": "yarn lint && jest"
   },
   "dependencies": {
   },
