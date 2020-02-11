@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/nuxt-community/gtm-module/compare/v2.1.0...v2.1.1) (2020-02-11)
+
+
+### Bug Fixes
+
+* prevent calling init with initial id when autoInit enabled ([24744a5](https://github.com/nuxt-community/gtm-module/commit/24744a50e95b48ec1f16f02f8ba652e5415123f1))
+
 ## [2.1.0](https://github.com/nuxt-community/gtm-module/compare/v2.0.1...v2.1.0) (2020-02-11)
 
 
