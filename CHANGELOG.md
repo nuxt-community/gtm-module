@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/nuxt-community/gtm-module/compare/v2.0.1...v2.1.0) (2020-02-11)
+
+
+### Features
+
+* allow manually init with multiple ids (closes [#1](https://github.com/nuxt-community/gtm-module/issues/1), [#4](https://github.com/nuxt-community/gtm-module/issues/4), [#5](https://github.com/nuxt-community/gtm-module/issues/5)) ([accfa77](https://github.com/nuxt-community/gtm-module/commit/accfa77f92fa918412b19742ca13dbeedddef732))
+
 ### [2.0.1](https://github.com/nuxt-community/gtm-module/compare/v2.0.0...v2.0.1) (2020-02-10)
 
 
