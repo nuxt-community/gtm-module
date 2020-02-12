@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/nuxt-community/gtm-module/compare/v2.1.0...v2.1.1) (2020-02-11)
+
+
+### Bug Fixes
+
+* prevent calling init with initial id when autoInit enabled ([24744a5](https://github.com/nuxt-community/gtm-module/commit/24744a50e95b48ec1f16f02f8ba652e5415123f1))
+
+## [2.1.0](https://github.com/nuxt-community/gtm-module/compare/v2.0.1...v2.1.0) (2020-02-11)
+
+
+### Features
+
+* allow manually init with multiple ids (closes [#1](https://github.com/nuxt-community/gtm-module/issues/1), [#4](https://github.com/nuxt-community/gtm-module/issues/4), [#5](https://github.com/nuxt-community/gtm-module/issues/5)) ([accfa77](https://github.com/nuxt-community/gtm-module/commit/accfa77f92fa918412b19742ca13dbeedddef732))
+
+### [2.0.1](https://github.com/nuxt-community/gtm-module/compare/v2.0.0...v2.0.1) (2020-02-10)
+
+
+### Bug Fixes
+
+* guard against double script executation ([#3](https://github.com/nuxt-community/gtm-module/issues/3)) ([970e0e6](https://github.com/nuxt-community/gtm-module/commit/970e0e6965d1f1d3fce1d5c6bc47576d3a9079a9))
+
 ## 2.0.0 (2020-02-09)
 
 

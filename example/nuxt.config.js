@@ -16,7 +16,10 @@ module.exports = {
   gtm: {
     id: gtmId,
     scriptDefer: true,
-    pageTracking: true
-    // autoInit: false
+    pageTracking: true,
+    // layer: 'test',
+    variables: {
+      test: '1'
+    }
   }
 }
