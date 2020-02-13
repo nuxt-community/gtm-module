@@ -15,6 +15,7 @@ module.exports = {
     autoInit: true,
     scriptDefer: true,
     pageTracking: true,
+    noscript: true,
     // layer: 'test',
     variables: {
       test: '1'
