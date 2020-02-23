@@ -14,7 +14,6 @@ module.exports = {
     id: process.env.GTM_ID || 'GTM-KLQB72K',
     scriptDefer: true,
     pageTracking: true,
-    noscript: true,
     // layer: 'test',
     variables: {
       test: '1'

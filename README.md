@@ -35,6 +35,8 @@ yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
 
 ## Options
 
+Defaults:
+
 ```js
 {
   // Set to false to disable module in development mode
@@ -54,7 +56,7 @@ yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
   scriptDefer: false,
   scriptURL: 'https://www.googletagmanager.com/gtm.js',
 
-  noscript: false,
+  noscript: true,
   noscriptId: 'gtm-noscript',
   noscriptURL: 'https://www.googletagmanager.com/ns.html'
 }
