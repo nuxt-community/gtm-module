@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/nuxt-community/gtm-module/compare/v2.1.1...v2.2.0) (2020-02-23)
+
+
+### Features
+
+* enable noscript by default ([f511404](https://github.com/nuxt-community/gtm-module/commit/f511404d2a46d082e4f730daeb618543692d748d))
+* push page title to dataLayer ([#8](https://github.com/nuxt-community/gtm-module/issues/8)) ([9434562](https://github.com/nuxt-community/gtm-module/commit/943456256c5eba9ec0104ca5a9b2f8aee31f66ea))
+* ssr iframe injection ([d678f16](https://github.com/nuxt-community/gtm-module/commit/d678f16d46343e54ba788d0e13399d3b3c2234f7))
+* ssr support ([d896618](https://github.com/nuxt-community/gtm-module/commit/d896618ef23b4a6fbc723133d3b6b7266f67aad5))
+
+
+### Bug Fixes
+
+* add id to noscript iframe ([b345db7](https://github.com/nuxt-community/gtm-module/commit/b345db7deddf2fe2e11e5ee2925deda51c739b95))
+* call startPageTracking on client only ([774fccf](https://github.com/nuxt-community/gtm-module/commit/774fccffd8c9712229c9c4d90512f88546fe5ce4))
+* pageTitle is not available on SSR ([228d796](https://github.com/nuxt-community/gtm-module/commit/228d796c8b3c982520c26c296e9a2af937f90e28))
+
 ### [2.1.1](https://github.com/nuxt-community/gtm-module/compare/v2.1.0...v2.1.1) (2020-02-11)
 
 
