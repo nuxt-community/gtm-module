@@ -17,6 +17,7 @@ module.exports = {
     id: gtmId,
     scriptDefer: true,
     pageTracking: true,
+    noscript: true,
     // layer: 'test',
     variables: {
       test: '1'
