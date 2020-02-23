@@ -11,8 +11,7 @@ module.exports = {
     { handler: require('../') }
   ],
   gtm: {
-    id: 'GTM-56H68LH',
-    autoInit: true,
+    id: process.env.GTM_ID || 'GTM-KLQB72K',
     scriptDefer: true,
     pageTracking: true,
     noscript: true,
