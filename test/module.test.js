@@ -30,28 +30,26 @@ describe('Module (universal mode)', () => {
     expect(html).toContain(`data-hid="${scriptId}"`)
   })
 
-  test('Hasn\'t GTM noscript', async () => {
+  test('Has GTM noscript', async () => {
     const html = await get('/')
-    expect(html).not.toContain(`data-hid="${noscriptId}"`)
+    expect(html).toContain(`data-hid="${noscriptId}"`)
   })
 
   // test with real GTM id
-  if (gtmId !== 'GTM-XXXXXXX') {
-    test('GTM should be defined ($nuxt.$gtm)', async () => {
-      const window = await nuxt.renderAndGetWindow(url('/'))
-      expect(window.$nuxt.$gtm).toBeDefined()
-    })
+  test('GTM should be defined ($nuxt.$gtm)', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/'))
+    expect(window.$nuxt.$gtm).toBeDefined()
+  })
 
-    test('Verifying duplicate GTM script', async () => {
-      const window = await nuxt.renderAndGetWindow(url('/'))
+  test('Verifying duplicate GTM script', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
-      const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
-      const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
+    const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+    const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
+    const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
 
-      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
-    })
-  }
+    expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
+  })
 })
 
 describe('Module (spa mode)', () => {
@@ -82,26 +80,23 @@ describe('Module (spa mode)', () => {
     expect(html).toContain(`data-hid="${scriptId}"`)
   })
 
-  test('Hasn\'t GTM noscript', async () => {
+  test('Has GTM noscript', async () => {
     const html = await get('/')
-    expect(html).not.toContain(`data-hid="${noscriptId}"`)
+    expect(html).toContain(`data-hid="${noscriptId}"`)
   })
 
-  // test with real GTM id
-  if (gtmId !== 'GTM-XXXXXXX') {
-    test('GTM should be defined ($nuxt.$gtm)', async () => {
-      const window = await nuxt.renderAndGetWindow(url('/'))
-      expect(window.$nuxt.$gtm).toBeDefined()
-    })
+  test('GTM should be defined ($nuxt.$gtm)', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/'))
+    expect(window.$nuxt.$gtm).toBeDefined()
+  })
 
-    test('Verifying duplicate GTM script', async () => {
-      const window = await nuxt.renderAndGetWindow(url('/'))
+  test('Verifying duplicate GTM script', async () => {
+    const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
-      const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
-      const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
+    const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+    const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
+    const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
 
-      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
-    })
-  }
+    expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
+  })
 })

@@ -1,8 +1,5 @@
 const { resolve } = require('path')
 
-const env = process.env
-const gtmId = env && env.GTM_ID ? env.GTM_ID : 'GTM-XXXXXXX'
-
 module.exports = {
   rootDir: resolve(__dirname, '..'),
   buildDir: resolve(__dirname, '.nuxt'),
@@ -14,7 +11,7 @@ module.exports = {
     { handler: require('../') }
   ],
   gtm: {
-    id: gtmId,
+    id: process.env.GTM_ID || 'GTM-KLQB72K',
     scriptDefer: true,
     pageTracking: true,
     noscript: true,
