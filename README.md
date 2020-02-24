@@ -78,9 +78,6 @@ export default {
  modules: [
   '@nuxtjs/gtm'
  ],
- gtm: {
-   autoInit: false  // Disable auto init
- },
  plugins: [
   '~/plugins/gtm'
  ]
@@ -91,12 +88,12 @@ export default {
 
 ```js
 export default function({ $gtm, route }) {
-  $gtm.init(/* id */)
+  $gtm.init('GTM-XXXXXXX')
 }
 ```
 
-
-**Note:** All events will be still buffered in data layer but won't send until `init()` method getting called.
+- **Note:** All events will be still buffered in data layer but won't send until `init()` method getting called.
+- **Note:** Please consult with [Google Tag Manager Docs](https://developers.google.com/tag-manager/devguide#multiple-containers) for more information caveats using multiple containers.
 
 ### Router Integration
 
