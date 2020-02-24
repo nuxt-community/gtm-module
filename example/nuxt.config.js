@@ -10,6 +10,9 @@ module.exports = {
   modules: [
     { handler: require('../') }
   ],
+  plugins: [
+    '~/plugins/gtm'
+  ],
   gtm: {
     id: process.env.GTM_ID || 'GTM-KLQB72K',
     scriptDefer: true,
