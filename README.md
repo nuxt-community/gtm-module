@@ -42,7 +42,7 @@ Defaults:
   // Set to false to disable module in development mode
   dev: true,
 
-  id: null, /* REQUIRED */
+  id: null,
   layer: 'dataLayer',
   variables: {},
 
@@ -62,9 +62,39 @@ Defaults:
 }
 ```
 
-### GTM Initialisation
+### Manual GTM Initialization
 
-If you want to block Google Tag Manager before user directly allows (GDPR realisation or other), you can set `autoInit` option to `false` and then manually enable using `$gtm.init()`.
+There are several use cases that you may need more control over initialization:
+
+- Block Google Tag Manager before user directly allows (GDPR realisation or other)
+- Dynamic ID based on request path or domain
+- Initialize with multi containers
+- Enable GTM on page level
+
+`nuxt.config.js`:
+
+```js
+export default {
+ modules: [
+  '@nuxtjs/gtm'
+ ],
+ gtm: {
+   autoInit: false  // Disable auto init
+ },
+ plugins: [
+  '~/plugins/gtm'
+ ]
+}
+```
+
+`plugins/gtm.js`:
+
+```js
+export default function({ $gtm, route }) {
+  $gtm.init(/* id */)
+}
+```
+
 
 **Note:** All events will be still buffered in data layer but won't send until `init()` method getting called.
 
