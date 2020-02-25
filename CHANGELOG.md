@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.2](https://github.com/nuxt-community/gtm-module/compare/v2.2.1...v2.2.2) (2020-02-25)
+
+
+### Bug Fixes
+
+* always render noscript block ([a921b42](https://github.com/nuxt-community/gtm-module/commit/a921b4235a77562e52f0aaf4b62fe2c4023d91e0))
+
 ### [2.2.1](https://github.com/nuxt-community/gtm-module/compare/v2.2.0...v2.2.1) (2020-02-24)
 
 ## [2.2.0](https://github.com/nuxt-community/gtm-module/compare/v2.1.1...v2.2.0) (2020-02-23)
