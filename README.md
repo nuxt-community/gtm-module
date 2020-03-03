@@ -64,6 +64,11 @@ Defaults:
 
 ### Manual GTM Initialization
 
+🚨 IMPORTANT 🚨
+
+There is a known issue with Nuxt < 2.12.0 fixed by nuxt/nuxt.js#6807 which causes shared state and adding multiple tags.
+Please use `nuxt-edge` for now if want to use `init` on server-side.
+
 There are several use cases that you may need more control over initialization:
 
 - Block Google Tag Manager before user directly allows (GDPR realisation or other)
