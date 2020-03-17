@@ -3,10 +3,8 @@ const { resolve } = require('path')
 module.exports = {
   rootDir: resolve(__dirname, '..'),
   buildDir: resolve(__dirname, '.nuxt'),
-  head () {
-    return {
-      title: '@nuxtjs/gtm-module'
-    }
+  head: {
+    title: '@nuxtjs/gtm-module'
   },
   srcDir: __dirname,
   render: {
