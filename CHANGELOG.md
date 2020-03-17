@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.2.3](https://github.com/nuxt-community/gtm-module/compare/v2.2.2...v2.2.3) (2020-03-17)
+
+
+### Bug Fixes
+
+* prepend `router.base` when sending page track events ([#20](https://github.com/nuxt-community/gtm-module/issues/20)) ([2940d85](https://github.com/nuxt-community/gtm-module/commit/2940d8540b813677ffbea81874913cd8c82db50b))
+* **module:** warn about head as a function in nuxt config is not supported ([#14](https://github.com/nuxt-community/gtm-module/issues/14)) ([8b37f8d](https://github.com/nuxt-community/gtm-module/commit/8b37f8d7075b0015beb8abbd6ba4a76884e56447))
+
 ### [2.2.2](https://github.com/nuxt-community/gtm-module/compare/v2.2.1...v2.2.2) (2020-02-25)
 
 
