@@ -23,7 +23,7 @@ yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
 2. Add `@nuxtjs/gtm` to the `buildModules` section of `nuxt.config.js`
 
 ```js
-{
+export default {
   buildModules: [
     '@nuxtjs/gtm',
   ],
@@ -38,27 +38,29 @@ yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
 Defaults:
 
 ```js
-{
-  // Set to false to disable module in development mode
-  dev: true,
+export default {
+  gtm: {
+    // Set to false to disable module in development mode
+    dev: true,
+ 
+    id: null,
+    layer: 'dataLayer',
+    variables: {},
 
-  id: null,
-  layer: 'dataLayer',
-  variables: {},
+    pageTracking: false,
+    pageViewEventName: 'nuxtRoute',
 
-  pageTracking: false,
-  pageViewEventName: 'nuxtRoute',
+    autoInit: true,
+    respectDoNotTrack: true,
 
-  autoInit: true,
-  respectDoNotTrack: true,
+    scriptId: 'gtm-script',
+    scriptDefer: false,
+    scriptURL: 'https://www.googletagmanager.com/gtm.js',
 
-  scriptId: 'gtm-script',
-  scriptDefer: false,
-  scriptURL: 'https://www.googletagmanager.com/gtm.js',
-
-  noscript: true,
-  noscriptId: 'gtm-noscript',
-  noscriptURL: 'https://www.googletagmanager.com/ns.html'
+    noscript: true,
+    noscriptId: 'gtm-noscript',
+    noscriptURL: 'https://www.googletagmanager.com/ns.html'
+  }
 }
 ```
 
