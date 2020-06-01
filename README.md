@@ -40,10 +40,9 @@ Defaults:
 ```js
 export default {
   gtm: {
-    // Set to false to disable module in development mode
-    dev: true,
- 
-    id: null,
+    enabled: undefined, /* see below */
+
+    id: undefined,
     layer: 'dataLayer',
     variables: {},
 
@@ -60,6 +59,21 @@ export default {
     noscript: true,
     noscriptId: 'gtm-noscript',
     noscriptURL: 'https://www.googletagmanager.com/ns.html'
+  }
+}
+```
+
+### Enabled
+
+GTM module uses a debug-only version of `$gtm` during development (`nuxt dev`).
+
+You can explicitly enable or disable it using `enabled` option:
+
+```js
+export default {
+  gtm: {
+    // Always send real GTM events (also when using `nuxt dev`)
+    enabled: true
   }
 }
 ```
