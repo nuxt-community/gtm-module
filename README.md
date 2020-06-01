@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Checks][checks-src]][checks-href]
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
@@ -148,8 +148,8 @@ Copyright (c) Nuxt.js Community
 [npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/gtm.svg?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/gtm
 
-[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/gtm-module.svg?style=flat-square
-[circle-ci-href]: https://circleci.com/gh/nuxt-community/gtm-module
+[checks-src]: https://flat.badgen.net/github/checks/nuxt-community/gtm-module/dev
+[checks-href]: https://github.com/nuxt-community/gtm-module/actions
 
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/gtm-module.svg?style=flat-square
 [codecov-href]: https://codecov.io/gh/nuxt-community/gtm-module
