@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/nuxt-community/gtm-module/compare/v2.2.3...v2.3.0) (2020-06-01)
+
+
+### Features
+
+* require nuxt > 2.12 to avoid ssr memory leak ([43f41c8](https://github.com/nuxt-community/gtm-module/commit/43f41c8e7ce58ca40476cc9624be8464908b2d91))
+* use mock version for nuxt dev ([ec85699](https://github.com/nuxt-community/gtm-module/commit/ec856996a7caa6f6ef0c21c7c03457ec1a27552c)), closes [#32](https://github.com/nuxt-community/gtm-module/issues/32)
+
+
+### Bug Fixes
+
+* check respectDoNotTrack option value ([#37](https://github.com/nuxt-community/gtm-module/issues/37)) ([b1a938c](https://github.com/nuxt-community/gtm-module/commit/b1a938c44f953bd35f9a00e42189ee0291015d41))
+
 ### [2.2.3](https://github.com/nuxt-community/gtm-module/compare/v2.2.2...v2.2.3) (2020-03-17)
 
 
