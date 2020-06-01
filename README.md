@@ -63,7 +63,7 @@ export default {
 }
 ```
 
-### Enabled
+### `enabled`
 
 GTM module uses a debug-only version of `$gtm` during development (`nuxt dev`).
 
@@ -79,11 +79,6 @@ export default {
 ```
 
 ### Manual GTM Initialization
-
-🚨 IMPORTANT 🚨
-
-There is a known issue with Nuxt.js < 2.12.0 fixed by https://github.com/nuxt/nuxt.js/pull/6807 which causes shared state and adding multiple tags.
-Please upgrade Nuxt.js to `^2.12.0` if you want to use `init` on server-side.
 
 There are several use cases that you may need more control over initialization:
 
