@@ -17,7 +17,7 @@
 1. Add `@nuxtjs/gtm` dependency to your project
 
 ```bash
-yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
+yarn add @nuxtjs/gtm --dev # or npm install @nuxtjs/gtm --save-dev
 ```
 
 2. Add `@nuxtjs/gtm` to the `buildModules` section of `nuxt.config.js`
