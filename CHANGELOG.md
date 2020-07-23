@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/nuxt-community/gtm-module/compare/v2.3.0...v2.3.1) (2020-07-23)
+
+
+### Bug Fixes
+
+* **plugin:** find head script ([#59](https://github.com/nuxt-community/gtm-module/issues/59)) ([d9deea9](https://github.com/nuxt-community/gtm-module/commit/d9deea9fcf0f15b38668a9a6ab9f36cbb149efe2))
+
 ## [2.3.0](https://github.com/nuxt-community/gtm-module/compare/v2.2.3...v2.3.0) (2020-06-01)
 
 
