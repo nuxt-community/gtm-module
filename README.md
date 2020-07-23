@@ -20,11 +20,11 @@
 yarn add @nuxtjs/gtm # or npm install @nuxtjs/gtm
 ```
 
-2. Add `@nuxtjs/gtm` to the `buildModules` section of `nuxt.config.js`
+2. Add `@nuxtjs/gtm` to the `modules` section of `nuxt.config.js`
 
 ```js
 export default {
-  buildModules: [
+  modules: [
     '@nuxtjs/gtm',
   ],
   gtm: {
