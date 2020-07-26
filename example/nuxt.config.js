@@ -24,5 +24,10 @@ module.exports = {
     variables: {
       test: '1'
     }
+  },
+  publicRuntimeConfig: {
+    gtm: {
+      id: 'GTM-KLQB72K&runtime'
+    }
   }
 }
