@@ -27,6 +27,7 @@ for (const mode of modes) {
     nuxtConfig.mode = mode
 
     const gtmId = nuxtConfig.gtm.id
+    const runtimeId = nuxtConfig.publicRuntimeConfig.gtm.id
     const scriptId = nuxtConfig.gtm.scriptId || defaultSettings.scriptId
     const noscriptId = nuxtConfig.gtm.noscriptId || defaultSettings.noscriptId
 
@@ -60,14 +61,22 @@ for (const mode of modes) {
       expect(window.$nuxt.$gtm).toBeDefined()
     })
 
+    test('Should include runtimeConfig', async () => {
+      const window = await nuxt.renderAndGetWindow(url('/'))
+
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${runtimeId}"]`)
+
+      expect(headGtmScriptsExternal.length).toBe(1)
+    })
+
     test('Verifying duplicate GTM script', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
       const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
       const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
 
-      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(3)
+      expect(totalAmoutOfGtmScriptsAtHead).toBeLessThan(4)
     })
 
     test('Should include pushed event', async () => {
