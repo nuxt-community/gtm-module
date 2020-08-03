@@ -41,6 +41,7 @@ Defaults:
 export default {
   gtm: {
     enabled: undefined, /* see below */
+    debug: false,
 
     id: undefined,
     layer: 'dataLayer',
@@ -77,6 +78,10 @@ export default {
   }
 }
 ```
+
+### `debug`
+
+Whether `$gtm` API calls like `init` and `push` are logged to the console.
 
 ### Manual GTM Initialization
 
