@@ -32,6 +32,27 @@ export default {
   }
 }
 ```
+### Runtime Config
+
+You can use [runtime config](https://nuxtjs.org/guide/runtime-config) if need to use dynamic environment variables in production. Otherwise, the options will be hardcoded during the build and won't be read from `nuxt.config` anymore.
+
+```js
+export default {
+  modules: [
+    '@nuxtjs/gtm'
+  ],
+
+  gtm: {
+    id: 'GTM-XXXXXXX, // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID
+    }
+  },
+}
+```
 
 ## Options
 
