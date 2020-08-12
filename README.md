@@ -43,7 +43,7 @@ export default {
   ],
 
   gtm: {
-    id: 'GTM-XXXXXXX, // Used as fallback if no runtime config is provided
+    id: 'GTM-XXXXXXX', // Used as fallback if no runtime config is provided
   },
 
   publicRuntimeConfig: {
