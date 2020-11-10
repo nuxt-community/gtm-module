@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/nuxt-community/gtm-module/compare/v2.3.2...v2.4.0) (2020-11-10)
+
+
+### Features
+
+* support `crossOrigin` option ([#78](https://github.com/nuxt-community/gtm-module/issues/78)) ([e843176](https://github.com/nuxt-community/gtm-module/commit/e8431767b72e63d67968d811fe5919011b441f57))
+* **module:** add support for runtimeConfig ([#53](https://github.com/nuxt-community/gtm-module/issues/53)) ([2bc1735](https://github.com/nuxt-community/gtm-module/commit/2bc173538ea255deea13ad575fefc82b7a28e3f0))
+* **plugin:** add `debug` option and disable by default ([#61](https://github.com/nuxt-community/gtm-module/issues/61)) ([37f13e5](https://github.com/nuxt-community/gtm-module/commit/37f13e551518efa5aa88c095a544a73c8ac5fc9b))
+
+
+### Bug Fixes
+
+* **plugin.mock:** handle `event.eventCallback` ([#76](https://github.com/nuxt-community/gtm-module/issues/76)) ([cdb0c5c](https://github.com/nuxt-community/gtm-module/commit/cdb0c5c3a5ce07ca3cadcafa673b0397f31dfc75))
+* fix doNotTrack polyfill ([#87](https://github.com/nuxt-community/gtm-module/issues/87)) ([c69d1cf](https://github.com/nuxt-community/gtm-module/commit/c69d1cf87179ad77a245fb7a745731ce666630bf))
+* **module:** allow client side push before init ([#60](https://github.com/nuxt-community/gtm-module/issues/60)) ([c9b073a](https://github.com/nuxt-community/gtm-module/commit/c9b073a9c9f84ccb5271fb70fc602b1fe6f187c4))
+
 ### [2.3.2](https://github.com/nuxt-community/gtm-module/compare/v2.3.1...v2.3.2) (2020-07-23)
 
 
