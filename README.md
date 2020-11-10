@@ -77,6 +77,7 @@ export default {
     scriptId: 'gtm-script',
     scriptDefer: false,
     scriptURL: 'https://www.googletagmanager.com/gtm.js',
+    crossOrigin: false,
 
     noscript: true,
     noscriptId: 'gtm-noscript',
