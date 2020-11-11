@@ -71,6 +71,9 @@ export default {
     pageTracking: false,
     pageViewEventName: 'nuxtRoute',
 
+    pushOriginalLocation: false,
+    pushOriginalLocationName: 'originalLocation',
+
     autoInit: true,
     respectDoNotTrack: true,
 
