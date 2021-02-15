@@ -64,7 +64,7 @@ for (const mode of modes) {
     test('Should include runtimeConfig', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${runtimeId}"]`)
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtag/js?id=${runtimeId}"]`)
 
       expect(headGtmScriptsExternal.length).toBe(1)
     })
@@ -72,7 +72,7 @@ for (const mode of modes) {
     test('Verifying duplicate GTM script', async () => {
       const window = await nuxt.renderAndGetWindow(url('/'))
 
-      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtm.js?id=${gtmId}"]`)
+      const headGtmScriptsExternal = window.document.querySelectorAll(`head script[src^="https://www.googletagmanager.com/gtag/js?id=${gtmId}"]`)
       const headGtmScriptsHid = window.document.querySelectorAll(`head script[data-hid="${scriptId}"]`)
       const totalAmoutOfGtmScriptsAtHead = headGtmScriptsExternal.length + headGtmScriptsHid.length
 
