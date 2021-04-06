@@ -74,6 +74,8 @@ export default {
     autoInit: true,
     respectDoNotTrack: true,
 
+    pushOriginalLocation: false,
+
     scriptId: 'gtm-script',
     scriptDefer: false,
     scriptURL: 'https://www.googletagmanager.com/gtm.js',
