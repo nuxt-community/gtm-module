@@ -66,7 +66,7 @@ export default {
 
     id: undefined,
     layer: 'dataLayer',
-    variables: {},
+    variables: {}, /* scriptURL query params such as gtm_auth, gtm_preview can go here */
 
     pageTracking: false,
     pageViewEventName: 'nuxtRoute',
