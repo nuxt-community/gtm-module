@@ -101,50 +101,6 @@ for (const mode of modes) {
       })
     })
   })
-
-  describe('When nonce option is available', () => {
-    let nuxt
-
-    const nuxtConfig = loadConfig(__dirname, '../../example')
-    nuxtConfig.mode = mode
-    const DMMY_NONCE = "DMMY_NONCE"
-    nuxtConfig.gtm.nonce = DMMY_NONCE
-
-    beforeAll(async () => {
-      ({ nuxt } = (await setup(nuxtConfig)))
-    }, 60000)
-
-    afterAll(async () => {
-      await nuxt.close()
-    })
-
-    test('Has Nonce attribute', async () => {
-      const html = await get('/')
-      expect(html).toContain(`nonce="${DMMY_NONCE}"`)
-    })
-    
-  })
-
-  describe('When nonce option is not available', () => {
-    let nuxt
-
-    const nuxtConfig = loadConfig(__dirname, '../../example')
-    nuxtConfig.mode = mode
-
-    beforeAll(async () => {
-      ({ nuxt } = (await setup(nuxtConfig)))
-    }, 60000)
-
-    afterAll(async () => {
-      await nuxt.close()
-    })
-
-    test("Doesn't have Nonce attribute", async () => {
-      const html = await get('/')
-      expect(html).not.toContain('nonce')
-    })
-    
-  })
 }
 
 for (const mode of modes) {
@@ -185,3 +141,45 @@ for (const mode of modes) {
     })
   })
 }
+
+describe('When nonce option is available', () => {
+  let nuxt
+
+  const nuxtConfig = loadConfig(__dirname, '../../example')
+  const DMMY_NONCE = "DMMY_NONCE"
+  nuxtConfig.gtm.nonce = DMMY_NONCE
+
+  beforeAll(async () => {
+    ({ nuxt } = (await setup(nuxtConfig)))
+  }, 60000)
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test('Has Nonce attribute', async () => {
+    const html = await get('/')
+    expect(html).toContain(`nonce="${DMMY_NONCE}"`)
+  })
+  
+})
+
+describe('When nonce option is not available', () => {
+  let nuxt
+
+  const nuxtConfig = loadConfig(__dirname, '../../example')
+
+  beforeAll(async () => {
+    ({ nuxt } = (await setup(nuxtConfig)))
+  }, 60000)
+
+  afterAll(async () => {
+    await nuxt.close()
+  })
+
+  test("Doesn't have Nonce attribute", async () => {
+    const html = await get('/')
+    expect(html).not.toContain('nonce')
+  })
+  
+})
