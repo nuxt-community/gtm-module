@@ -177,9 +177,9 @@ describe('When nonce option is not available', () => {
     await nuxt.close()
   })
 
-  test("Doesn't have Nonce attribute", async () => {
+  test("Nonce attribute value is undefined", async () => {
     const html = await get('/')
-    expect(html).not.toContain('nonce')
+    expect(html).toContain('nonce=\"undefined\"')
   })
   
 })
