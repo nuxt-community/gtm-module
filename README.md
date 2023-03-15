@@ -122,7 +122,7 @@ export default {
   '@nuxtjs/gtm'
  ],
  plugins: [
-  '~/plugins/gtm'
+  { src: '~/plugins/gtm', mode: 'client' }
  ]
 }
 ```
