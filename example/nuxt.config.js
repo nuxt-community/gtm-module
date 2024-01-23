@@ -19,6 +19,7 @@ module.exports = {
   gtm: {
     id: process.env.GTM_ID || 'GTM-KLQB72K',
     scriptDefer: true,
+    scriptFetchpriority: 'auto',
     pageTracking: true,
     // layer: 'test',
     variables: {
