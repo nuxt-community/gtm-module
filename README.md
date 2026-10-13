@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxtjs/gtm` was built for Nuxt 2, which reached end of life on June 30, 2024. For Nuxt 3+, see [Nuxt Scripts](https://scripts.nuxt.com).
+
 # @nuxtjs/gtm
 
 [![npm version][npm-version-src]][npm-version-href]
